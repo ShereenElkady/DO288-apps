@@ -10,13 +10,17 @@ config_s2i
 
 ######## CUSTOMIZATION STARTS HERE ############
 
-echo "---> Installing application source"
+echo "---> Copy Index.html"
+
 cp -Rf /tmp/src/*.html ./
 
-echo "This Application is built at" >> ./info.html
+echo "--------> Creating info.html"
 
-echo "$(date +%F)" >> ./info.html
-echo "Helloooo My Friendssssss" >> ./info.html
+echo "This application is built on$(date "+%F")" >> ./info.html
+
+echo "Hello Wordl" >> ./info.html 
+
+
 
 
 ######## CUSTOMIZATION ENDS HERE ############
